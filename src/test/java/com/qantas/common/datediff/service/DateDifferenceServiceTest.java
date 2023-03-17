@@ -1,4 +1,4 @@
-package com.my.workout.datediff.service;
+package com.qantas.common.datediff.service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

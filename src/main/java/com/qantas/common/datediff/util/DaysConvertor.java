@@ -1,4 +1,4 @@
-package com.my.workout.datediff.util;
+package com.qantas.common.datediff.util;
 
 import lombok.extern.slf4j.Slf4j;
 

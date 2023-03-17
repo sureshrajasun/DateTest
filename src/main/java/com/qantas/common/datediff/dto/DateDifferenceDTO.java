@@ -1,4 +1,4 @@
-package com.my.workout.datediff.dto;
+package com.qantas.common.datediff.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

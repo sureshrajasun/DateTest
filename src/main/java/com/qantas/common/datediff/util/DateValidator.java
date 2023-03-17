@@ -1,4 +1,4 @@
-package com.my.workout.datediff.util;
+package com.qantas.common.datediff.util;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -22,7 +22,7 @@ public class DateValidator {
             day = Integer.parseInt(date.substring(8));
 
         } catch (NumberFormatException e) {
-            log.error("Exception occurred while parsing the date.", e.getMessage());
+            log.error("Exception occurred while parsing the date. {}", e.getMessage());
             return false;
         }
 

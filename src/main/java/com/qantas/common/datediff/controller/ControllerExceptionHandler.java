@@ -1,7 +1,7 @@
-package com.my.workout.datediff.controller;
+package com.qantas.common.datediff.controller;
 
-import com.my.workout.datediff.dto.ErrorMessage;
-import com.my.workout.datediff.exception.DateDifferenceException;
+import com.qantas.common.datediff.dto.ErrorMessage;
+import com.qantas.common.datediff.exception.DateDifferenceException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ public class ControllerExceptionHandler {
 
     @ExceptionHandler(value = {DateDifferenceException.class})
     public ResponseEntity<ErrorMessage> dateDifferenceException(DateDifferenceException ex, WebRequest request) {
-        log.info("Exception occurred while finding the date difference.", ex.getMessage());
+        log.info("Exception occurred while finding the date difference. {}", ex.getMessage());
         return new ResponseEntity<>(ErrorMessage.builder()
                                                         .message(ex.getMessage())
                                                         .errorCode(HttpStatus.BAD_REQUEST.toString())
@@ -27,7 +27,7 @@ public class ControllerExceptionHandler {
 
     @ExceptionHandler(value = {Exception.class})
     public ResponseEntity<ErrorMessage> globalException(Exception ex, WebRequest request) {
-        log.info("Exception occurred.", ex.getMessage());
+        log.info("Exception occurred. {}", ex.getMessage());
         return new ResponseEntity<>(ErrorMessage.builder()
                                                         .message(ex.getMessage())
                                                         .errorCode(HttpStatus.BAD_REQUEST.toString())

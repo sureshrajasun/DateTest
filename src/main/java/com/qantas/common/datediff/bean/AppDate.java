@@ -1,4 +1,4 @@
-package com.my.workout.datediff.bean;
+package com.qantas.common.datediff.bean;
 
 public class AppDate {
     private int day;
