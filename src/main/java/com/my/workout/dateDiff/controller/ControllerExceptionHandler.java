@@ -18,4 +18,10 @@ public class ControllerExceptionHandler {
         log.info("Exception occurred while finding the date difference.", ex.getMessage());
         return new ResponseEntity<ErrorMessage>(ErrorMessage.builder().message(ex.getMessage()).build(), HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(value = {Exception.class})
+    public ResponseEntity<ErrorMessage> globalException(Exception ex, WebRequest request) {
+        log.info("Exception occurred.", ex.getMessage());
+        return new ResponseEntity<ErrorMessage>(ErrorMessage.builder().message(ex.getMessage()).build(), HttpStatus.BAD_REQUEST);
+    }
 }

@@ -13,14 +13,24 @@ public class DateDifferenceService {
 
     public String getDateDifference(String startDate, String endDate) {
 
+        boolean isDatesInvalid = false;
+        StringBuilder errorMessage = new StringBuilder();
+
         if(!DateValidator.isValidDate(startDate)){
             log.error("Start Date '{}' is not valid.",startDate);
-            throw new DateDifferenceException(String.format("Start Date '%s' is not valid.",startDate));
+            isDatesInvalid = true;
+            errorMessage.append(String.format(" Start Date '%s' is not valid. ",startDate));
         }
-        if(!DateValidator.isValidDate(endDate)){
+        if(!DateValidator.isValidDate(endDate)) {
             log.error("End Date '{}' is not valid. ", endDate);
-            throw new DateDifferenceException(String.format("End Date '%s' is not valid. ", endDate));
+            isDatesInvalid = true;
+            errorMessage.append(String.format(" End Date '%s' is not valid.", endDate));
         }
+
+        if(isDatesInvalid){
+            throw new DateDifferenceException(errorMessage.toString());
+        }
+
 
         int diffInDays = getDiffInDays(convertToDate(startDate), convertToDate(endDate));
 

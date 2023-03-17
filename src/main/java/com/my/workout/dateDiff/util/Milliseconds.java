@@ -1,5 +1,8 @@
 package com.my.workout.dateDiff.util;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class Milliseconds {
     public static long getTimeInMillSec(int year, int month, int day) {
         int hour = 0;
@@ -12,7 +15,7 @@ public class Milliseconds {
         // Multiply the number of seconds by 1000 to get the number of milliseconds
         long millis = (long) unixSeconds * 1000;
 
-       // System.out.println("Milliseconds for the given date: " + millis);
+       log.info("Milliseconds for the given date: {} ", millis);
         return millis;
     }
 
