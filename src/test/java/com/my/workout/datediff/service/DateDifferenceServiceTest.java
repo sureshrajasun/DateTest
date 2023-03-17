@@ -7,13 +7,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class DateDifferenceServiceTest {
+class DateDifferenceServiceTest {
 
     @Autowired
     DateDifferenceService dateDifferenceService;
 
     @Test
-    public void testDateDifference(){
+    void testDateDifference(){
         assertEquals("19", dateDifferenceService.getDateDifference( "1983-06-02", "1983-06-22" ));
         assertEquals("173", dateDifferenceService.getDateDifference( "1984-07-04", "1984-12-25" ));
         assertEquals("1979", dateDifferenceService.getDateDifference( "1989-01-03", "1983-08-03" ));

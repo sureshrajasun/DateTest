@@ -6,10 +6,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class DateValidatorTest {
+class DateValidatorTest {
 
     @Test
-    public void testValidDates() {
+    void testValidDates() {
 
         assertEquals(true, DateValidator.isValidDate( "1982-01-01"));
         assertEquals(true, DateValidator.isValidDate( "2000-02-29"));
@@ -20,7 +20,7 @@ public class DateValidatorTest {
     }
 
     @Test
-    public void testInValidDates() {
+    void testInValidDates() {
 
         assertEquals(false, DateValidator.isValidDate( "198-01-01"));
         assertEquals(false, DateValidator.isValidDate( "A000-02-29"));
