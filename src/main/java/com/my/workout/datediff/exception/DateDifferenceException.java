@@ -1,4 +1,4 @@
-package com.my.workout.dateDiff.exception;
+package com.my.workout.datediff.exception;
 
 public class DateDifferenceException extends RuntimeException {
 

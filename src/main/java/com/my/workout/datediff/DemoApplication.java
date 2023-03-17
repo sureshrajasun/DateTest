@@ -1,4 +1,4 @@
-package com.my.workout.dateDiff;
+package com.my.workout.datediff;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

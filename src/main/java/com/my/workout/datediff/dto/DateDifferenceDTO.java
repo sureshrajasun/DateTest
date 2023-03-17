@@ -1,4 +1,4 @@
-package com.my.workout.dateDiff.dto;
+package com.my.workout.datediff.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class DateDifferenceDto {
+public class DateDifferenceDTO {
 
     private String startDate;
     private String endDate;

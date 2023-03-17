@@ -1,4 +1,4 @@
-package com.my.workout.dateDiff.dto;
+package com.my.workout.datediff.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,5 +12,8 @@ import lombok.NoArgsConstructor;
 public class ErrorMessage {
 
  private String message;
+ private String type;
+ private String errorCode;
+ private String status;
 
 }

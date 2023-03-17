@@ -1,16 +1,20 @@
-package com.my.workout.dateDiff.util;
+package com.my.workout.datediff.util;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class DateValidator {
+    private DateValidator() {}
+
     public static boolean isValidDate(String date) {
         if (date == null || date.length() != 10) {
             log.info("Date length is not 10. {}", date);
             return false;
         }
 
-        int day, month, year;
+        int day;
+        int month;
+        int year;
 
         try {
             year = Integer.parseInt(date.substring(0, 4));
@@ -23,7 +27,7 @@ public class DateValidator {
         }
 
         // Check for year from 1901 to 2999
-        if (year < 1901 || year > 2999 ) {
+        if (year < 1901 || year > 2999) {
             return false;
         }
 

@@ -1,4 +1,4 @@
-package com.my.workout.dateDiff.bean;
+package com.my.workout.datediff.bean;
 
 public class AppDate {
     private int day;
